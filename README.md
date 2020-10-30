@@ -1,59 +1,83 @@
-# Spreadsheet Basics
+# Git Started
 
 ## Story
 
-You are working with a web page development team. You've got a new project and you want to plan the
-workflow. The project manager has made three `csv` files: for the home, the registration and the login page.
-The tasks and their descriptions have already been written, you just want to make it easier to
-work with, so you want to convert the `csv` file you received into a spreadsheet and share it to your
-coworkers.
+What does Git mean? It stands for "global information tracker": when you're in a
+good mood, and it actually works for you. Angels sing, and a light suddenly
+fills the room. Or "goddamn idiotic truckload of sh*t": when it breaks.
+
+This was actually a quote from Linus Torvalds, the creator of Linux and
+the Git version control system. Torvalds also said that since he is an
+egotistical bastard, he named this another child of his after himself, too:
+the word 'git' is a British slang for 'an unpleasant or contemptible
+person'. Well, Git has a reputation of being obscure and hard to use.
+
+We hope you'll find it not _that_ hard; it is just a tool created by
+developers for developers: it has a really bad UX, but at the end of the
+day it is the Swiss Army knife of source code management. The best strategy
+is to use it a lot, and we recommend you to read a good book about it later on.
+
+All the projects in Codecool are handled under Git, and this project
+covers the necessary basics of Git usage.
 
 ## What are you going to learn?
 
-- How to use Google Sheets
-- Import a csv file into Google Sheets
-- Format the table and cells
-- Manage multiple sheets
-- Use custom number formats
-- Collaboration
+- clone a remote repository from GitHub,
+- add and modify files,
+- create commits,
+- handle excluded files,
+- and push the result back to the remote server.
+
+**This is what you need to do with every project in the future.**
 
 ## Tasks
 
-1. Create a new Spreadsheet in your Google Drive, name it `Project planning`. Create 3 sheets for the 3 pages, name them `Home page`, `Registration page`, `Login page`. Import the sample data in the spreadsheet.
-    - There are 3 sheets in the created Google Sheets with the names `Home page`, `Registration page`, `Login page`
-    - The sheets are filled with the appropriate csv data
+1. Click the button above with the text "Start project" to create your project repository. After that, when you click the button "Open repository", it will lead you a GitHub repository page.
+    - The repository is created under `https://github.com/CodecoolGlobal` with the name `git-started-general-<username>`.
 
-2. Highlight the first row and column. Make their positions fixed and make sure that the heights and widths of the cells fit to the data.
-    - The first row's and column's positions are fixed
-    - The first row and column have a different style from the data
-    - The `Task` column's cells break the phrase if it is longer than the cell
-    - The `Description` column's cells' widths and heights fit to the cells' data
+2. Clone the repository under a `projects` folder on your computer (which can be anywhere in your user's home space)!
+    - The repository is cloned into `projects/git-started-<username>`.
 
-3. Place one tick box in all of the `Done` column's cells.
-    - The `Done` column is filled with cells with tick boxes
+3. Add a `.gitignore` file that skips the `temp` folder and all the files with `tmp` extension! Commit this new file! Remember writing well formed commit messages!
+    - File `.gitignore` is added with the second commit (the first is the original "Initial commit").
+    - Git filters for `temp` and the `tmp` extension.
+    - The commit message has coherent form and style (e.g. "Fix broken link on contact page").
+    - There is no typo in the commit message.
 
-4. Insert a column named `Estimated time` between the `Business Value` and the `Done` columns. Change the cells' text format to `Time`.
-    - There is a column between the `Business value` and the `Done` columns called `Estimated time`
-    - The cells' text format is `Time`
+4. Create a folder named `data` and a file `lorem.txt` in it. Add the first sentence of "Lorem Ipsum" into the file, then commit.
+    - New file `data/lorem.txt` gets added to the repo with the third commit.
+    - The content is as expected, the first sentence of "Lorem Ipsum".
+    - The commit message has coherent form and style (e.g. "Fix broken link on contact page").
+    - There is no typo in the commit message.
 
-5. Share the sheets with your teammates and leave a clarification comment on one of the descriptions.
-    - The sheet is shared with at least one person
-    - In the `Home page` sheet, there is a comment on the `Design` row's `Description` cell with the phrase `Main colors: blue, yellow, beige`
+5. Add a folder named `temp` and copy `lorem.txt` in it. If you've written the `.gitignore` file properly, it will not get committed later.
+    - There is a `lorem.txt` file in the `temp` folder in the working directory.
+
+6. Add the next 3 sentences of "Lorem Ipsum", each one in separate lines, to `data/lorem.txt`, and commit!
+    - The 4th commit adds 3 lines to `data/lorem.txt`.
+    - The file contains the first four sentences of "Lorem Ipsum".
+    - The commit message has coherent form and style (e.g. "Fix broken link on contact page").
+    - There is no typo in the commit message.
+
+7. Rename `data/lorem.txt` to `data/lorem_ipsum.txt`, and commit!
+    - The 5th commit replaces `data/lorem.txt` with `data/lorem_ipsum.txt`.
+    - The commit message has coherent form and style (e.g. "Fix broken link on contact page").
+    - There is no typo in the commit message.
+
+8. Push all the above changes to GitHub!
+    - All the 5 commits are on GitHub.
+
+9. [OPTIONAL] Check your commit history on GitHub. Create a `git-history.txt` file that includes the commit hash of each commit. Add the new file, commit, and push.
+    - A new file named `git-history.txt` is added to the repository.
+    - This file contains the 5 earlier commit hashes.
 
 ## General requirements
 
-None
+- You need to have Git installed (check `git --version` on your system), otherwise visit [this page](https://git-scm.com/downloads).
 
 ## Hints
 
-- Google uses the `freeze` word for row and column position fixing
-- The text formatting works the same way as in Google Docs
-- If you want to type multiple lines in a cell use the `Alt + Enter` or `Option + Enter` combination
-- When changing the number format to time, make sure, that the cell had a compatible value written in it (e.g. 3:00)
-- You don't need to do anything on the page that opens after clicking on the `Starting your project` link. 
-  It is needed for your project to show up on your _Projects_ page in Journey, 
-  and we need this to follow and review your progress. 
-  It will also create a new project on GitHub, but we will not use it in this project.
+None
 
 ## Starting your project
 
@@ -61,8 +85,14 @@ None
 
 ## Background materials
 
-- <i class="far fa-exclamation"></i> [Google Sheets sample files](https://drive.google.com/drive/folders/1kAM-KHnsoLbWKC51DjMII14Azs-vwEFw)
-- <i class="far fa-exclamation"></i> [Google sheets basics](https://zapier.com/learn/google-sheets/google-sheets-tutorial/#create) (you need just the first 2 points, we will learn from the rest in another section)
-- <i class="far fa-exclamation"></i> [Importing data](https://support.google.com/docs/answer/40608?co=GENIE.Platform%3DDesktop&hl=en)
-- <i class="far fa-book-open"></i> [Official documentation](https://support.google.com/docs/answer/46973?hl%3Den%26ref_topic%3D1361470)
-- <i class="far fa-video"></i> [Basic tutorial](https://www.youtube.com/watch?v=FIkZ1sPmKNw) (you need just the first 8:30)
+- <i class="far fa-exclamation"></i> [Git basics](project/curriculum/materials/pages/git/git-basics.md)
+- <i class="far fa-video"></i> [Git tutorial video](https://www.youtube.com/watch?v=HVsySz-h9r4)
+- <i class="far fa-book-open"></i> Learning [Git concepts](https://dev.to/unseenwizzard/learn-git-concepts-not-commands-4gjc)
+- <i class="far fa-book-open"></i> [A simple guide about Git](http://rogerdudler.github.io/git-guide/)
+- <i class="far fa-book-open"></i> [Git home page](https://git-scm.com/)
+- <i class="far fa-book-open"></i> [About nice commit messages](https://chris.beams.io/posts/git-commit/)
+- <i class="far fa-book-open"></i> [A comprehensive and free Git book](https://git-scm.com/book/en/v2)
+- <i class="far fa-candy-cane"></i> [.gitignore generator](http://gitignore.io/)
+- <i class="far fa-candy-cane"></i> [Lorem Ipsum generator](https://loremipsum.io/)
+- <i class="far fa-candy-cane"></i> [Git's original introduction by Linus Torvalds](https://github.com/git/git/blob/e83c5163316f89bfbde7d9ab23ca2e25604af290/README)
+- <i class="far fa-video"></i> [Linus Torvald's talk about why was Git created and how it works](https://www.youtube.com/watch?v=4XpnKHJAok8)
